@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Table from './components/Table.js'
 import Sorter from './components/Sorter.js'
+import Filter from './components/Filter.js'
 import TestData from './configs/test.json'
 
-const processData = ({ data, headers }, sortOption, orderOption) => {
+const processData = ({ data, headers }, sortOption, orderOption, filterOption) => {
   let processed = data.map(object => {
     headers.forEach(header => {
       let type = typeof data.find(object => object[header] !== undefined)[header]
@@ -28,7 +29,9 @@ const processData = ({ data, headers }, sortOption, orderOption) => {
     return object
   })
 
-  return sortData(sortOption, processed, orderOption)
+  let sorted = sortData(sortOption, processed, orderOption)
+  let filtered = filterData(sorted, filterOption)
+  return filtered
 }
 
 const getUniqueHeaders = (data) => {
@@ -109,22 +112,36 @@ const sortData = (key, data, order) => {
   }
 }
 
+const filterData = (data, filterOption) => {
+  if (filterOption === 'all') {
+    return data
+  } else {
+    return data.filter(object => {
+      return object[filterOption] !== null && object[filterOption] !== '' && object[filterOption] !== undefined
+    })
+  }
+}
+
 const App = () => {
   const [headers, setHeaders] = useState(getUniqueHeaders(TestData))
   const [sortOption, setSortOption] = useState(headers[0])
   const orderOptions = ['asc', 'des']
   const [orderOption, setOrderOption] = useState(orderOptions[0])
+  const filterOptions = ['all', ...headers]
+  const [filterOption, setFilterOption] = useState(filterOptions[0])
 
   const [dataList, setDataList] = useState(processData({ data: TestData, headers: headers }, sortOption, orderOption))
   console.table(dataList)
 
   useEffect(() => {
-    setDataList(processData({ data: TestData, headers: headers }, sortOption, orderOption))
-  }, [headers, sortOption, orderOption])
+    setDataList(processData({ data: TestData, headers: headers }, sortOption, orderOption, filterOption))
+    console.log('filter', filterOption)
+  }, [headers, sortOption, orderOption, filterOption])
 
   return (
     <div className="App">
-      <Sorter headers={headers} data={dataList} sortOption={sortOption} setSortOption={setSortOption} orderOptions={orderOptions} orderOption={orderOption} setOrderOption={setOrderOption} />
+      <Sorter headers={headers} sortOption={sortOption} setSortOption={setSortOption} orderOptions={orderOptions} orderOption={orderOption} setOrderOption={setOrderOption} />
+      <Filter filterOptions={filterOptions} filterOption={filterOption} setFilterOption={setFilterOption} />
       <Table data={dataList} headers={headers} />
     </div>
   );
