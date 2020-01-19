@@ -4,7 +4,7 @@ const TableColumn = (props) => {
     let display = props.data
     if (typeof props.data === 'boolean') {
         display = props.data ? 'True' : 'False'
-    } else if (props.data === undefined || props.data === null) {
+    } else if (props.data === undefined || props.data === null || props.data === '') {
         display = 'N/A'
     }
 
