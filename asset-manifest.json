@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/dynamic-table-generator/static/css/main.d1b05096.chunk.css",
+    "main.js": "/dynamic-table-generator/static/js/main.0734d52a.chunk.js",
+    "main.js.map": "/dynamic-table-generator/static/js/main.0734d52a.chunk.js.map",
+    "runtime-main.js": "/dynamic-table-generator/static/js/runtime-main.400027aa.js",
+    "runtime-main.js.map": "/dynamic-table-generator/static/js/runtime-main.400027aa.js.map",
+    "static/js/2.747eb226.chunk.js": "/dynamic-table-generator/static/js/2.747eb226.chunk.js",
+    "static/js/2.747eb226.chunk.js.map": "/dynamic-table-generator/static/js/2.747eb226.chunk.js.map",
+    "index.html": "/dynamic-table-generator/index.html",
+    "precache-manifest.f878815974d479363f27e7647b113d0e.js": "/dynamic-table-generator/precache-manifest.f878815974d479363f27e7647b113d0e.js",
+    "service-worker.js": "/dynamic-table-generator/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/dynamic-table-generator/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.747eb226.chunk.js.LICENSE": "/dynamic-table-generator/static/js/2.747eb226.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.400027aa.js",
+    "static/js/2.747eb226.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.0734d52a.chunk.js"
+  ]
+}
