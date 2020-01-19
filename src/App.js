@@ -1,24 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Table from './components/Table.js'
+import TestData from './configs/test.json'
 
-function App() {
+const processData = ({ data, headers }) => {
+  let processed = data.map(object => {
+    headers.forEach(header => {
+      let type = typeof data.find(object => object[header] !== undefined)[header]
+      if (!object.hasOwnProperty(header)) {
+        switch (type) {
+          case 'number':
+            object[header] = null
+            break
+          case 'boolean':
+            object[header] = null
+            break
+          case 'string':
+            object[header] = undefined
+            break
+          default:
+            break
+        }
+      }
+    })
+
+    return object
+  })
+
+  return processed
+}
+
+const getUniqueHeaders = (data) => {
+  let extracted = []
+  data.forEach(obj => {
+    let array = Object.keys(obj)
+    extracted = extracted.concat(array)
+  })
+
+  return Array.from(new Set(extracted))
+}
+
+const App = () => {
+  const [headers, setHeaders] = useState(getUniqueHeaders(TestData))
+  const [dataList, setDataList] = useState(processData({ data: TestData, headers: headers }))
+  console.table(dataList)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Table data={dataList} headers={headers} />
     </div>
   );
 }

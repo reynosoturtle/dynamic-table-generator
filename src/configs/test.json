@@ -1,0 +1,87 @@
+[
+  {
+    "_id": "58f42742968611033c0f8e19",
+    "isActive": true,
+    "balance": "$2,228.85",
+    "company": "BOILCAT",
+    "email": "camposdaniels@boilcat.com",
+    "phone": "+1 (805) 406-2093",
+    "address": "470 Metropolitan Avenue, Breinigsville, Maine, 5580",
+    "favoriteFruit": "strawberry"
+  },
+  {
+    "_id": "58f42742c7f96c6ab83b86f3",
+    "isActive": false,
+    "balance": "$2,762.39",
+    "age": 30,
+    "eyeColor": "blue",
+    "name": "Caroline Perez",
+    "gender": "female",
+    "company": "TRASOLA"
+  },
+  {
+    "_id": "58f427420a5e19f6ab46d76d",
+    "balance": "$3,315.25",
+    "age": 29,
+    "eyeColor": "brown",
+    "name": "Jarvis Walsh",
+    "company": "MOTOVATE",
+    "email": "jarviswalsh@motovate.com",
+    "phone": "+1 (970) 566-2215"
+  },
+  {
+    "_id": "58f427424dfa29c6ec832ffd",
+    "isActive": false
+  },
+  {
+    "_id": "58f4274288b2c2aa1e776ac0",
+    "isActive": true,
+    "balance": "$1,146.91",
+    "age": 37,
+    "eyeColor": "brown",
+    "name": "Guzman Macdonald",
+    "gender": "male",
+    "favoriteFruit": "strawberry"
+  },
+  {
+    "_id": "58f4274291b3b9b09d09becb",
+    "gender": "male",
+    "company": "MAXEMIA",
+    "email": "vancemassey@maxemia.com",
+    "phone": "+1 (970) 466-2847",
+    "address": "283 Arlington Avenue, Leming, District Of Columbia, 2873",
+    "favoriteFruit": "banana"
+  },
+  {
+    "_id": "58f427424e36233a79fa8193",
+    "balance": "$3,084.19",
+    "age": 39,
+    "eyeColor": "brown",
+    "name": "Mcintosh Roach",
+    "gender": "male",
+    "email": "mcintoshroach@fuelton.com",
+    "phone": "+1 (882) 402-3168",
+    "address": "727 Rutledge Street, Fairhaven, Kentucky, 6053",
+    "favoriteFruit": "strawberry"
+  },
+  {
+    "_id": "58f42742dadc22f3f1d9d84b",
+    "balance": "$3,672.15",
+    "age": 37,
+    "eyeColor": "blue",
+    "name": "Paulette Potts",
+    "gender": "female",
+    "address": "945 Essex Street, Waumandee, Minnesota, 1472",
+    "favoriteFruit": "banana"
+  },
+  {
+    "_id": "58f4274219930a4b331e8285",
+    "isActive": true,
+    "age": 29,
+    "eyeColor": "green",
+    "company": "EXTRAGEN",
+    "email": "barrettcobb@extragen.com",
+    "phone": "+1 (917) 403-3304",
+    "favoriteFruit": "apple"
+  }
+]
